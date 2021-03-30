@@ -1,9 +1,19 @@
 import './Header.css';
+import HeaderLeft from './HeaderLeft/HeaderLeft';
+import HeaderRight from './HeaderRight/HeaderRight';
 
 const Header = () => {
     return (
         <div className="header">
             This is the Header
+
+            <div className="header__left">
+                <HeaderLeft />
+            </div>
+            <div className="header__right">
+                <HeaderRight />
+            </div>
+
         </div>
     )
 }
