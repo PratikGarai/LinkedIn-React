@@ -7,4 +7,6 @@
 
 .app__body {
     display: flex;
+    flex-direction: row;
+    flex: auto;
 }
