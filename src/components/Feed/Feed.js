@@ -1,9 +1,11 @@
+import PostContainer from './PostContainer/PostContainer';
+
 import './Feed.css';
 
 const Feed = () => {
     return (
         <div className="feed">
-            Feed
+            <PostContainer />
         </div>
     )
 }

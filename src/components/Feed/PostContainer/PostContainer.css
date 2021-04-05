@@ -1,0 +1,33 @@
+.post__container {
+    background-color: white;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.post__input {
+    border : 1px solid lightgrey;
+    border-radius: 30px;
+    display: flex;
+    padding : 10px;
+    color : gray;
+    padding-left: 15px;
+}
+
+.post__input > form {
+    display: flex;
+    width: 100%;
+}
+
+.post__input > form > input {
+    border : none;
+    flex : 1;
+    margin-left: 10px;
+    outline-width: 0;
+    font-weight: 600;
+}
+
+.post__input > form > button {
+    display: none;
+}
