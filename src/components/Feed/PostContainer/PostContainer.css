@@ -31,3 +31,8 @@
 .post__input > form > button {
     display: none;
 }
+
+.post__options {
+    display: flex;
+    justify-content: space-evenly;
+}
