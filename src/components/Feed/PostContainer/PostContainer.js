@@ -7,12 +7,18 @@ import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 
 import './PostContainer.css'
 
-const PostContainer = () => {
+const PostContainer = ({setArticles}) => {
+
+    const sendPost = (e) => {
+        e.preventDefault();
+        console.log("Fired");
+    }
+
     return (
         <div className="post__container">
             <div className="post__input">
                 <CreateIcon />
-                <form>
+                <form onSubmit={sendPost}>
                     <input type="text" />
                     <button type="submit">Send</button>
                 </form>

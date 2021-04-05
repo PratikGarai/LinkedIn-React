@@ -8,11 +8,11 @@ import './Feed.css';
 
 const Feed = () => {
 
-    const [articles, ] = useState(articlesdata);
+    const [articles, setArticles] = useState(articlesdata);
 
     return (
         <div className="feed">
-            <PostContainer />
+            <PostContainer setArticles={setArticles} />
 
             {articles.map(article => 
             <Article 
