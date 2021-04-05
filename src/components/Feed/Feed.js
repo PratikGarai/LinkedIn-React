@@ -1,18 +1,25 @@
+import {useState} from 'react';
 import PostContainer from './PostContainer/PostContainer';
 import Article from './Article/Article';
+
+import articlesdata from '../../sampledata/articles';
 
 import './Feed.css';
 
 const Feed = () => {
+
+    const [articles, ] = useState(articlesdata);
+
     return (
         <div className="feed">
             <PostContainer />
 
+            {articles.map(article => 
             <Article 
-                name="Pratik Garai" 
-                description="this is a test" 
-                message="this is a message" 
-            />
+                name={article.name} 
+                description={article.description} 
+                message={article.message}
+            />)}
         </div>
     )
 }
