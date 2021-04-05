@@ -1,0 +1,32 @@
+.article {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.article__header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.article__info {
+    margin-left: 10px;
+}
+
+.article__info > p {
+    font-size: 13px;
+    color : gray;
+}
+
+.article__info > h2 {
+    font-size: 16px;
+}
+
+.article__body {
+    overflow-wrap: anywhere;
+}
+
+.article__buttons {
+    display: flex;
+}
