@@ -10,7 +10,7 @@ const HeaderLeft = () => {
 
             <div className="header__search">
                 <SearchIcon />
-                <input type="text"></input>
+                <input placeholder="Search..." type="text"></input>
             </div>
         </div>
     );

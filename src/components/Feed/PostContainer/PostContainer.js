@@ -16,7 +16,6 @@ const PostContainer = ({setArticles}) => {
 
     const sendPost = (e) => {
         e.preventDefault();
-        console.log("Fired");
 
         if(message==="")
             return ;

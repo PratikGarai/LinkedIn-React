@@ -13,7 +13,9 @@ const App = () =>
   return (
     <div className="App">
       <Header />
-      {!user ? <Login /> :
+      {!user ? 
+        <Login /> 
+        :
         <div className="app__body">
           <Sidebar />
           <Feed />
