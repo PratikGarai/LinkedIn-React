@@ -7,11 +7,12 @@ import EventNoteIcon from '@material-ui/icons/EventNote';
 import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 import {db} from '../../../firebase';
 import firebase from 'firebase';
+import { useSelector } from 'react-redux';
 
 import './PostContainer.css'
 
-const PostContainer = ({setArticles}) => {
-
+const PostContainer = () => {
+    const user = useSelector(state => state.user.currentUser);
     const [message, setMessage] = useState("");
 
     const sendPost = (e) => {
@@ -20,13 +21,15 @@ const PostContainer = ({setArticles}) => {
         if(message==="")
             return ;
 
+        let description = user.description?user.description:"LinkedIn User"
+
         db
             .collection('posts')
             .add({
-                name : "Pratik Test",
-                description : "My react account",
+                name : user.displayName,
+                description : description,
                 message : message,
-                imageUrl : "",
+                imageUrl : user.photoUrl,
                 timestamp : firebase.firestore.FieldValue.serverTimestamp()
             });
         

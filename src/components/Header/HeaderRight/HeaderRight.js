@@ -4,10 +4,14 @@ import SupervisoraccountIcon from '@material-ui/icons/SupervisorAccount';
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
 import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import { useSelector } from 'react-redux';
 
 import './HeaderRight.css';
 
 const HeaderRight = () => {
+    
+    const user = useSelector(state => state.user.currentUser);
+
     return(
         <div className="header__right">
             <HeaderOption Icon={HomeIcon} title="Home" />
@@ -15,7 +19,7 @@ const HeaderRight = () => {
             <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
             <HeaderOption Icon={ChatIcon} title="Messaging" />
             <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-            <HeaderOption avatar="https://avatars.githubusercontent.com/u/58355527?v=4" title="Pratik Garai" />
+            <HeaderOption avatar={user.photoUrl+" "} title={user.displayName} />
         </div>
     );
 }
