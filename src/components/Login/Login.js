@@ -53,7 +53,16 @@ const Login  = () => {
 
     const loginToApp = (e) => {
         e.preventDefault();
-        console.log(data);
+        auth
+            .signInWithEmailAndPassword(data.email, data.password)
+            .then((userAuth)=> {
+                dispatch(setCurrentUser({
+                    email : userAuth.email,
+                    uid : userAuth.uid,
+                    displayName : userAuth.displayName,
+                    photoUrl : userAuth.photoURL
+                }));
+            });
     };
 
     return (
