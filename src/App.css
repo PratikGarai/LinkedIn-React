@@ -3,12 +3,20 @@
     flex-direction: column;
     background-color: #f3f2ef;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .app__body {
     display: flex;
     flex-direction: row;
     width : 80%;
-    margin-top: 10px;
+    margin-top: 15px;
+}
+
+#curtain {
+    position : fixed;
+    height: 100vh;
+    width : 100vw;
+    background-color: whitesmoke;
+    z-index: -100;
 }

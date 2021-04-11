@@ -5,9 +5,10 @@ import Feed from './components/Feed/Feed';
 import {useDispatch, useSelector} from "react-redux";
 import Login from './components/Login/Login';
 import {setCurrentUser} from './redux/user/user.actions';
+import { auth } from './firebase';
+import Widgets from './components/Widgets/Widgets';
 
 import './App.css';
-import { auth } from './firebase';
 
 const App = () => 
 {
@@ -34,6 +35,7 @@ const App = () =>
 
   return (
     <div className="App">
+      <div id="curtain"></div>
       <Header />
       {!user ? 
         <Login /> 
@@ -41,6 +43,7 @@ const App = () =>
         <div className="app__body">
           <Sidebar />
           <Feed />
+          <Widgets />
         </div>
       }
     </div>
