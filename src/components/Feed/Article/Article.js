@@ -11,7 +11,7 @@ const Article = ({name, description, message, photoUrl}) => {
     return (
         <div className="article">
             <div className="article__header">
-                <Avatar />
+                <Avatar src={photoUrl+" "} alt={name}/>
                 <div className="article__info">
                     <h2>{name}</h2>
                     <p>{description}</p>

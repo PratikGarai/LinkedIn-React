@@ -62,6 +62,9 @@ const Login  = () => {
                     displayName : userAuth.displayName,
                     photoUrl : userAuth.photoURL
                 }));
+            })
+            .catch(err => {
+                return alert(err);
             });
     };
 
