@@ -19,7 +19,7 @@ const HeaderRight = () => {
             <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
             <HeaderOption Icon={ChatIcon} title="Messaging" />
             <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-            <HeaderOption avatar={user.photoUrl+" "} title={user.displayName} />
+            {user && <HeaderOption avatar={user.photoUrl+" "} title={user.displayName} />}
         </div>
     );
 }

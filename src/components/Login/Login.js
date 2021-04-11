@@ -46,7 +46,7 @@ const Login  = () => {
                 })
             })
             .catch(err => {
-                return alert(err.message);
+                return alert(err);
             })
 
     };
